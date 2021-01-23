@@ -79,7 +79,7 @@ class InvisibleReCaptcha
     public function render($lang = null)
     {
         $html = '';
-        if ($this->renderedTimes === 0) {
+        if ($this->renderedTimes < 1) {
             $html .= $this->initRender($lang);
         } else {
             $this->renderedTimes++;
